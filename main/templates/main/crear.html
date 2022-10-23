@@ -1,0 +1,5 @@
+<form method="post" action="/crear/">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit", name="save">Registrar Casa</button>
+</form>

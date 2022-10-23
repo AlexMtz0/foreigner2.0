@@ -1,0 +1,12 @@
+{% load crispy_forms_tags %}
+
+    <h1>{{casa.casa_nombre}}</h1>
+    <p>{{casa.home_photo}}</p>
+    <p>{{casa.casa_responsable}}</p>
+    <img src={{casa.home_photo.url}}/>
+    
+    <form method="POST" action="#" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit", name="save">Subir Foto</Button>
+    </form>

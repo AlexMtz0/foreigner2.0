@@ -1,0 +1,21 @@
+{% extends 'main/baselogin.html' %}
+
+{% block titlehome %}Iniciar Sesión{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block contenthome %}
+<br><br><br><br><br>
+<div class="logcont">
+    <div class="d-flex justify-content-center">
+        <div class="col-5">
+            <form method="post" class="from-group">
+                {% csrf_token %}
+                {{form|crispy}}
+                <p>¿Aún no tienes una cuenta? Crea una <a href="/register">Aquí</a></p>
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

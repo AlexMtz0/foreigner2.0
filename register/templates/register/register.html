@@ -1,0 +1,22 @@
+{% extends 'main/baselogin.html' %}
+
+{% block titlehome %}Registrarse{% endblock %}
+
+
+{% load crispy_forms_tags %}
+
+
+{% block contenthome %}
+<br><br><br>
+<div class="logcont">
+    <div class="d-flex justify-content-center">
+        <div class="col-5">
+            <form method="POST" class="form-group">
+                {% csrf_token %}
+                {{form|crispy}}
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

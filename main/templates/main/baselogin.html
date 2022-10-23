@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .wrapper{
+                background: url("https://cdn.glitch.global/c1b45bb9-678f-4aaf-948c-2c8d5551f3a2/Fotoram.io.jpg?v=1652685958373") no-repeat  ;
+                background-size: cover;
+                height: 100vh;
+            }
+            .navbar{
+                height: 120px;
+                width: 100%;
+                background:rgba(255, 255, 255, 0.8);
+            }
+            .logo{
+                position: relative;
+                width: 90px;
+                height: auto;
+                top:-11px;
+                left: 90px;
+                right: 100px;
+            }
+            .navbar ul{
+                float: right;
+                margin-right: 90px;
+            }
+
+            .navbar ul li{
+                list-style: none;
+                margin: 0 8px;
+                display: inline-block;
+                line-height: 120px;
+            }
+            .navbar ul li a{
+                text-decoration: none;
+                color: #000000;
+                font-size: 20px;
+                padding: 6px 16px;
+                font-family: 'Crete Round', serif;
+                transition: .4s;
+            }.navbar ul li a:hover{
+                color: #FF8728  ;
+            }
+            .motiv{
+                font-family: 'Cinzel', serif;
+                position: relative;
+                width: 1000px;
+                left: 17%;
+                right: 50%;
+                top: 35%;
+                font-size: 35px;
+                color: #ffffff;
+                background:rgba(214, 214, 214, 0.8);
+            }
+            .logcont{
+                background:rgba(214, 214, 214, 0.8);
+            }
+            #loginform{
+                top:50%;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>{% block titlehome %}  {% endblock %}</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="https://cdn.glitch.global/c1b45bb9-678f-4aaf-948c-2c8d5551f3a2/Logo_An%C3%A1huac%20(1).svg?v=1652684314534">
+                <ul>
+                    <li><a href="/login/">Iniciar Sesión</a></li>
+                    <li><a href="/register/">Registrarse</a></li>
+                </ul>
+            </nav>
+        {% block contenthome %}
+        {% endblock %}
+        </div>
+    </body>
+</html>

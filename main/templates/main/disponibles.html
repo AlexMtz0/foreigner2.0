@@ -1,0 +1,8 @@
+{% for i in casas %}
+{% if i.casa_aprobada %}
+    <h1>{{i.casa_nombre}}</h1>
+    <p>{{i.home_photo}}</p>
+    <p>{{i.casa_responsable}}</p>
+    <img src={{i.home_photo.url}}/>
+{% endif %}
+{% endfor %}
